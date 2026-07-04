@@ -8,7 +8,7 @@ export default function Feed() {
 
   const getFeeds = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/feed");
+      const response = await axios.get("https://chathub-f9rc.onrender.com/api/feed");
       setFeeds(response.data);
     } catch (err) {
       console.log("Cannot get data from backend", err);
@@ -26,7 +26,7 @@ export default function Feed() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/feed", {
+      await axios.post("https://chathub-f9rc.onrender.com/api/feed", {
         content,
       });
 
